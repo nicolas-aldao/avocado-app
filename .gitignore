@@ -1,0 +1,9 @@
+# Dependency directories
+node_modules
+
+# Optional REPL history
+.next
+
+# Other files
+.DS_Store
+yarn.lock

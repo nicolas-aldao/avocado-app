@@ -14,7 +14,7 @@ const ProductPage = () => {
         .fetch(`/api/avo/${query.id}`)
         .then((response) => response.json())
         .then((data: TProduct) => {
-          setProduct(data);
+          setProduct(data.entry);
         });
     }
   }, [query.id]);

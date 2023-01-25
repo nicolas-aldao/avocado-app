@@ -13,7 +13,7 @@ const ProductPage = () => {
       window
         .fetch(`/api/avo/${query.id}`)
         .then((response) => response.json())
-        .then((data: TProduct) => {
+        .then((data) => {
           setProduct(data.entry);
         });
     }

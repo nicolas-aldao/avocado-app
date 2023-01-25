@@ -1,6 +1,7 @@
 import React from 'react'
 import { Segment, Card } from 'semantic-ui-react'
 import Link from 'next/link'
+import Image from 'next/image'
 import styles from './cardItem.module.css';
 
 type ProductListProps = {
@@ -17,11 +18,11 @@ const mapProductsToCards = (products: TProduct[]) =>
       margin: '0 1rem 1rem 1rem',
     }}
   >
-    <Link key={id} href="/product/[id]" as={`/product/${id}`} passHref>
+    <Link key={id} href={`/product/${id}`} passHref prefetch={false}>
       <Card
         as="div"
         header={name}
-        image={image}
+        image={<Image src={image} height={290} width={290} alt='an avocado'/>}
         meta={<Card.Meta style={{ color: 'dimgray' }}>{price}</Card.Meta>}
         className={styles.cardItem}
       />

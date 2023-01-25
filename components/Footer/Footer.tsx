@@ -19,7 +19,7 @@ const Footer = () => (
             <Header as="h4" content="Nosotros" />
             <List>
               <List.Item>
-                <Link href="/about">
+                <Link href="/about" prefetch={false}>
                   <p>Conoce más</p>
                 </Link>
               </List.Item>
@@ -29,7 +29,7 @@ const Footer = () => (
             <Header as="h4" content="Servicios" />
             <List>
               <List.Item>
-                <Link href="/">
+                <Link href="/" prefetch={false}>
                   <p>Todos los productos</p>
                 </Link>
               </List.Item>
